@@ -1,0 +1,12 @@
+const express = require('express');
+const router = express.Router();
+const khachHangController = require('../controllers/khachHangController');
+
+router.get('/', khachHangController.getAll);
+router.get('/search', khachHangController.search);
+router.get('/:id', khachHangController.getById);
+router.post('/', khachHangController.create);
+router.put('/:id', khachHangController.update);
+router.delete('/:id', khachHangController.delete);
+
+module.exports = router;
